@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { navlinks } from '../data/data';
 import Button from '../component/Button';
+import { brandName } from '../data/data';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,22 +18,21 @@ const Navbar = () => {
     }, []);
 
 
-
     return (
         <>
-            <nav className="navbar fixed top-0 z-50">
+            <nav className={`navbar fixed top-0 z-50 w-full md:w-full`}>
                 <div className="logo flex items-center">
                     {/* <img src="../../public/hero.png" alt="logo" /> */}
-                    <h3 className='text-white'>Velocity digital</h3>
+                    <h3 className='text-white text-lg font-medium'>{brandName.brandName}</h3>
                 </div>
-                <div className="menu flex justify-around items-center gap-0 md:gap-6">
-                    <ul onClick={() => setMenuOpen(isMobile ? !menuOpen : false)} className={`${menuOpen ? "flex flex-col" : "hidden"} absolute top-18 left-0 z-50 h-content w-full text-center gap-4 bg-black text-white p-5 md:flex md:justify-around md:gap-5 md:relative md:top-0 md:p-0`}>
+                <div className="menu flex justify-end items-center gap-2 md:gap-9">
+                    <ul onClick={() => setMenuOpen(isMobile ? !menuOpen : false)} className={` ${menuOpen ? "top-20" : "top-[-500px]"} ${isMobile ? "-z-50" : "z-0"} text-center transition-all duration-350 flex flex-col absolute  left-0  w-full  bg-black  text-white p-5 gap-4 md:flex md:relative md:top-0 md:w-auto md:bg-transparent md:p-0 md:flex-row md:gap-6 lg:gap-10`}>
                         {navlinks.map((link) => (
                             <li key={link.id}><a href={link.src}>{link.title}</a></li>
                         ))}
                     </ul>
-                    <Button text="Book Call" bg_color="--primary" text_color="black" hover="--primary-hover" className="w-fit" />
-                    <button onClick={() => setMenuOpen(!menuOpen)} type='button' className={`relative w-8 h-8`} >
+                    <Button text="Book Call" bg_color="--primary" text_color="black" hover="--secondary" className="w-fit relative" />
+                    <button onClick={() => setMenuOpen(!menuOpen)} type='button' className={`relative w-8 h-8 ${isMobile ? "" : "hidden"}`} >
                         <span className={`absolute h-0.5 w-6 bg-white transition-all ${menuOpen ? "rotate-45 top-4" : "top-2"}`} />
                         <span className={`absolute h-0.5 w-6 bg-white top-4 transition all ${menuOpen ? "opacity-0" : ""}`} />
                         <span className={`absolute h-0.5 w-6 bg-white transition-all ${menuOpen ? "-rotate-45 top-4" : "top-6"}`} />
