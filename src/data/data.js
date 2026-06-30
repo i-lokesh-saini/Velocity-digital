@@ -261,25 +261,25 @@ export const teamData = {
     members: [
         {
             id: 1,
-            image: "/public/member-1.png",
+            image: "/member-1.png",
             name: "Alex Sterling",
             role: "Founder & CEO",
         },
         {
             id: 2,
-            image: "/public/member-2.png",
+            image: "/member-2.png",
             name: "Sarah Chen",
             role: "Performance Lead",
         },
         {
             id: 3,
-            image: "/public/member-3.png",
+            image: "/member-3.png",
             name: "Marcus Thorne",
             role: "SEO Director",
         },
         {
             id: 4,
-            image: "/public/member-4.png",
+            image: "/member-4.png",
             name: "Elena Rodriguez",
             role: "Creative Strategist",
         },
