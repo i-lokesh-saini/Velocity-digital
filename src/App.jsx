@@ -11,8 +11,10 @@ import Field from './pages/Field';
 import Team from './pages/Team';
 import OurWork from './pages/OurWork';
 import CaseStudy from './pages/CaseStudy';
+import useScrollSpy from './hooks/useScrollSpy';
 
 function LandingPage() {
+  useScrollSpy()
   const { hash } = useLocation();
 
   useEffect(() => {
