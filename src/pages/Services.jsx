@@ -9,7 +9,7 @@ const Services = () => {
                 <h6 className="sub-heading">{serviceData.subHeading}</h6>
                 <h2 className="heading">{serviceData.heading}</h2>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mx-2 md:mx-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 content-div'>
                 {serviceData.serviceCard.map((item) => (
                     <div className="bg-neutral-900 border-0 border-gray-200 rounded-lg hover:border-2 transition-all duration-300 p-10" key={item.id}>
                         <div className=" ">

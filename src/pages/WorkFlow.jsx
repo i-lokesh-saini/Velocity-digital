@@ -9,11 +9,11 @@ const WorkFlow = () => {
                 <p className="text-neutral-400 md:text-lg text-base md:w-[50%] m-auto w-3/4">{workFlowData.description}</p>
             </div>
             <div className="relative">
-                <div className="absolute top-[55%] left-0 w-full timeline-connector -translate-y-1/2 hidden lg:block"></div>
+                <div className="absolute top-8 left-0 w-full timeline-connector hidden lg:block"></div>
                 <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 md:gap-6 px-18">
                     {workFlowData.flowTab.map((item) => (
                         <div className="text-neutral-200 text-center" key={item.id}>
-                            <p className="bg-neutral-800 w-fit mx-auto text-2xl text-neutral-50 font-semibold py-3 border-2 border-stone-500 px-4 mb-2 rounded-sm hover:scale-110 ">{item.id}</p>
+                            <p className="bg-neutral-800 w-fit mx-auto text-2xl text-neutral-50 font-semibold py-3 border-2 border-stone-500 px-4 mb-2 rounded-full hover:scale-110 ">{item.id}</p>
                             <h6 className="text-xl">{item.title}</h6>
                             <p className="w-[80%] m-auto">{item.description}</p>
                         </div>

@@ -43,6 +43,10 @@ body {
     @apply md:px-10 px-2 py-10;
 }
 
+.content-div {
+    @apply mx-2 md:mx-8;
+}
+
 .timeline-connector {
     background: linear-gradient(90deg, #0000, #91db2a, #0000);
     height: 2px;
