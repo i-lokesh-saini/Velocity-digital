@@ -10,8 +10,8 @@ const Home = () => {
                 <h1 className="text-white font-black text-3xl md:text-5xl leading-tight mb-4 md:mb-4">{homeData.heading[0]}<span className="text-(--primary) block">{homeData.heading[1]}</span>{homeData.heading[2]}</h1>
                 <p className="text-gray-400 md:text-lg text-base leading-relaxed mb-8 w-3/4 md:w-2/3 text-left">{homeData.description}</p>
                 <div className="flex flex-wrap gap-4">
-                    <Button text={homeData.button1} bg_color="--primary" text_color="black" hover="--secondary" className="md:w-auto w-full" icon={FaArrowRight} />
-                    <Button text={homeData.button2} bg_color="transparent" text_color="white" hover="--secondary" className="md:w-auto w-full" />
+                    <Button text={homeData.button1} bg_color="--primary" text_color="black" hover="--secondary" className="md:w-auto w-full" icon={FaArrowRight} href="#contactForm" />
+                    <Button text={homeData.button2} bg_color="transparent" text_color="white" hover="--secondary" className="md:w-auto w-full" href="#work" />
                 </div>
             </div>
             <div className="relative md:mt-0 mt-10 md:h-[520px] h-[260px] flex justify-center items-center  ">

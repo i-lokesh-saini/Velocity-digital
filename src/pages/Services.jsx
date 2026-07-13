@@ -4,7 +4,7 @@ import { serviceData } from '../data/data'
 
 const Services = () => {
     return (
-        <section id='services' className='px-5 pt-12 md:pt-16 md:max-w-8xl max-w-full max-w-8xl mx-auto'>
+        <section id='services' className='p-5 md:max-w-8xl max-w-full max-w-8xl mx-auto'>
             <div className="heading-div text-left">
                 <h6 className="sub-heading">{serviceData.subHeading}</h6>
                 <h2 className="heading">{serviceData.heading}</h2>

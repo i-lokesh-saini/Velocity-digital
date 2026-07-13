@@ -302,7 +302,7 @@ export const teamData = {
 export const testimonialData = {
     subHeading: "What Our Partners Say",
     heading: "Trusted By Market Leaders",
-    testimonial: [
+    testimonialCard: [
         {
             id: 1,
             image: "/client1.jpg",
@@ -369,6 +369,7 @@ export const contactData = {
     description: "Contact us today for a free digital audit and strategic roadmap tailored to your specific market position.",
     contactInfo: [
         {
+            id: 1,
             icon: LuMail,
             title: "Email Us",
             info: {
@@ -377,6 +378,7 @@ export const contactData = {
             },
         },
         {
+            id: 2,
             icon: LuPhone,
             title: "Call Us",
             info: {
@@ -385,6 +387,7 @@ export const contactData = {
             },
         },
         {
+            id: 3,
             icon: LuInstagram,
             title: "Instagram",
             info: {
@@ -393,6 +396,7 @@ export const contactData = {
             },
         },
         {
+            id: 4,
             icon: LuClock,
             title: "Working Hours",
             info: {
@@ -402,53 +406,67 @@ export const contactData = {
         },
     ],
 
-    formData: {
-        title: "Let's Start Your Growth Journey",
-        fields: [
-            {
-                label: "Full Name",
-                type: "text",
-                name: "name",
-                placeholder: "John Doe"
-            },
-            {
-                label: "Email Address",
-                type: "email",
-                name: "email",
-                placeholder: "[John@company.com]"
-            },
-            {
-                label: "Phone Number",
-                type: "text",
-                name: "phone",
-                placeholder: "99854 76342"
-            },
-            {
-                label: "Service",
-                type: "select",
-                name: "service",
-                options: [
-                    "Performance Marketing",
-                    "SEO & Content",
-                    "Lead Generation",
-                    "Organic Social & Community",
-                    "Email & SMS Marketing",
-                    "Creative Production",
-                    "Growth Strategy"
-                ]
-            },
-            {
-                label: "Message",
-                type: "text",
-                name: "message",
-                placeholder: "How can we help you?"
-            },
-        ],
-        button: {
-            text: "SEND STRATEGY REQUEST",
-            link: "#"
-        }
-    }
+}
+
+export const formData = {
+    fullname: {
+        label: "Full Name",
+        type: "text",
+        name: "name",
+        placeholder: "John Doe"
+    },
+    company: {
+        label: "Company Name",
+        type: "text",
+        name: "company",
+        placeholder: "Company Name"
+    },
+    email: {
+        label: "Email Address",
+        type: "email",
+        name: "email",
+        placeholder: "John@company.com"
+    },
+    phone: {
+        label: "Phone Number",
+        type: "text",
+        name: "phone",
+        placeholder: "(+91) 99854 76342"
+    },
+    service: {
+        label: "Service of Interest",
+        type: "select",
+        name: "service",
+        options: [
+            "Performance Marketing",
+            "SEO & Content",
+            "Lead Generation",
+            "Organic Social & Community",
+            "Email & SMS Marketing",
+            "Creative Production",
+            "Growth Strategy",
+            "Website Design & Development"
+        ]
+    },
+    budget: {
+        label: "Budget",
+        type: "select",
+        name: "budget",
+        options: [
+            "Under ₹10,000",
+            "₹10,000 - ₹50,000",
+            "₹50,000 - ₹75,000",
+            "₹75,000 - ₹1,00,000",
+            "Above ₹1,00,000"
+        ]
+    },
+    message: {
+        label: "Message",
+        type: "textarea",
+        name: "message",
+        placeholder: "How can we help you?"
+    },
+    button: "SEND STRATEGY REQUEST",
 }
 
 
@@ -476,7 +494,7 @@ export const caseStudies = [
             },
             {
                 label: "Revenue Generated",
-                value: "$3.2M",
+                value: "₹3.2M",
                 description: "Generated in H1 2024",
             },
             {
@@ -496,7 +514,7 @@ export const caseStudies = [
             description:
                 "The client struggled with increasing customer acquisition costs, low conversion rates, and stagnant revenue despite offering premium products.",
             problems: [
-                "Monthly revenue stuck at $150K",
+                "Monthly revenue stuck at ₹150K",
                 "High bounce rates on landing pages",
                 "Disconnected marketing data",
             ],
@@ -536,7 +554,7 @@ export const caseStudies = [
             },
             {
                 title: "Average Order Value",
-                value: "+$42",
+                value: "+₹42",
             },
             {
                 title: "Ad Spend Efficiency",
@@ -571,7 +589,7 @@ export const caseStudies = [
             },
             {
                 label: "Revenue",
-                value: "$3.2M",
+                value: "₹3.2M",
             },
             {
                 label: "CTR",
@@ -620,7 +638,7 @@ export const caseStudies = [
             },
             {
                 label: "AOV",
-                value: "+$42",
+                value: "+₹42",
             },
             {
                 label: "Checkout Success",

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const OurWork = () => {
     const [hoveredBtn, setHoveredBtn] = useState(null);
     return (
-        <section id="work" className="px-5 pt-12 md:pt-16 md:max-w-8xl max-w-full max-w-8xl mx-auto">
+        <section id="work" className="p-5 md:max-w-8xl max-w-full max-w-8xl mx-auto">
             <div className="heading-div text-left">
                 <h6 className="sub-heading">{ourWorkData.subHeading}</h6>
                 <h2 className="heading">{ourWorkData.heading}</h2>
@@ -18,7 +18,7 @@ const OurWork = () => {
 
                     return (
                         <Link to={`/case-study/${item.slug}`} key={item.id}>
-                            <div className="overflow-hidden border border-slate-300 rounded-lg">
+                            <div className="overflow-hidden border border-slate-300 rounded-lg-">
                                 <div className={`content text-white bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out group-hover:scale-110`} style={{ backgroundImage: `url(${item.bgimage})` }}>
                                     <div className="bg-linear-to-t from-neutral-900/90 via-neutral-900/30 to-neutral-900/0 p-6">
                                         <h1 className="text-(--tertiary) font-semibold text-2xl mb-2 pt-60">{item.growth}</h1>

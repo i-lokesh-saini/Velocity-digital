@@ -3,10 +3,10 @@ import { fieldsData } from '../data/data'
 
 const Field = () => {
     return (
-        <section className="px-5 py-20 md:pt-16 md:max-w-8xl max-w-full max-w-8xl mx-auto bg-neutral-950 mt-20">
+        <section className="p-5 md:max-w-8xl max-w-full max-w-8xl mx-auto bg-neutral-950">
             <div className="heading-div text-center mb-5">
-                <h2 className="text-white text-2xl md:text-4xl font-extrabold mb-4">{fieldsData.heading}</h2>
-                <p className="text-neutral-400 text-base md:text-lg w-[50%] m-auto">{fieldsData.description}</p>
+                <h2 className="heading-2">{fieldsData.heading}</h2>
+                <p className="sub-heading-2">{fieldsData.description}</p>
             </div>
             <div className="w-4/5 m-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {fieldsData.tabs.map((item) => {

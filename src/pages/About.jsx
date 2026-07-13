@@ -6,7 +6,7 @@ import { aboutData } from '../data/data';
 
 const About = () => {
     return (
-        <section id='about' className='px-5 md:pt-24 py-20 pt-20 md:max-w-8xl max-w-full mx-auto bg-neutral-950 '>
+        <section id='about' className='p-5 md:max-w-8xl max-w-full mx-auto bg-neutral-950 '>
             <div className="heading-div">
                 <h6 className="sub-heading">{aboutData.subHeading}</h6>
                 <h2 className="heading">{aboutData.heading}</h2>
@@ -21,7 +21,7 @@ const About = () => {
                     ))
                 }
             </div>
-            <div className=" grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 contex">
+            <div className=" grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 md:px-8 px-2">
                 {aboutData.aboutbenifites.map((item) => {
                     const Icon = item.icon;
 

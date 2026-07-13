@@ -31,7 +31,7 @@ const Navbar = () => {
                             <li key={link.id}><a href={link.src}>{link.title}</a></li>
                         ))}
                     </ul>
-                    <Button text="Book Call" bg_color="--primary" text_color="black" hover="--secondary" className="w-fit relative" />
+                    <Button href="#contactForm" text="Book Call" bg_color="--primary" text_color="black" hover="--secondary" className="w-fit relative" />
                     <button onClick={() => setMenuOpen(!menuOpen)} type='button' className={`relative w-8 h-8 ${isMobile ? "" : "hidden"}`} >
                         <span className={`absolute h-0.5 w-6 bg-white transition-all ${menuOpen ? "rotate-45 top-4" : "top-2"}`} />
                         <span className={`absolute h-0.5 w-6 bg-white top-4 transition all ${menuOpen ? "opacity-0" : ""}`} />

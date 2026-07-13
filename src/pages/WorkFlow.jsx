@@ -3,10 +3,10 @@ import { workFlowData } from '../data/data.js';
 
 const WorkFlow = () => {
     return (
-        <section className="px-5 py-12 md:pt-16 md:max-w-8xl max-w-full max-w-8xl mx-auto bg-neutral-950 mt-20">
+        <section className="p-5 md:max-w-8xl max-w-full max-w-8xl mx-auto bg-neutral-950">
             <div className="heading-div text-center mb-15">
-                <h2 className="text-white md:text-4xl text-2xl font-extrabold mb-4 ">{workFlowData.heading}</h2>
-                <p className="text-neutral-400 md:text-lg text-base md:w-[50%] m-auto w-3/4">{workFlowData.description}</p>
+                <h2 className="heading-2 ">{workFlowData.heading}</h2>
+                <p className="sub-heading-2">{workFlowData.description}</p>
             </div>
             <div className="relative">
                 <div className="absolute top-8 left-0 w-full timeline-connector hidden lg:block"></div>

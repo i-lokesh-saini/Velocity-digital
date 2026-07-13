@@ -12,9 +12,15 @@ import Team from './pages/Team';
 import OurWork from './pages/OurWork';
 import CaseStudy from './pages/CaseStudy';
 import useScrollSpy from './hooks/useScrollSpy';
+import Testimonial from './pages/Testimonial';
+import Questions from './pages/Questions';
+import Contact from './pages/Contact';
+
+
+
 
 function LandingPage() {
-  useScrollSpy()
+  // useScrollSpy()
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -36,6 +42,9 @@ function LandingPage() {
       <OurWork />
       <Field />
       <Team />
+      <Testimonial />
+      <Questions />
+      <Contact />
     </>
   )
 }
