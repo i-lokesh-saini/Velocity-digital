@@ -469,9 +469,63 @@ export const formData = {
     button: "SEND STRATEGY REQUEST",
 }
 
+export const footerData = {
+    section1: {
+        heading: brandName.brandName,
+        description: "© 2024 Velocity Digital. All rights reserved. High-performance marketing for the digital age."
+    },
+    section2: {
+        heading: "Services",
+        list: [
+            "SEO Optimization",
+            "Paid Media Strategy",
+            "Content Authority",
+            "Web Development"
+        ]
+    },
+    section3: {
+        heading: "Quick Links",
+        list: [
+            {
+
+                title: "Case Study",
+                link: "#work"
+            },
+            {
+                title: "Our Team",
+                link: "#team"
+            },
+            {
+                title: "About Us",
+                link: "#about"
+            },
+            {
+                title: "Contact",
+                link: "#contact"
+            },
+        ]
+    },
+    section4: {
+        heading: "Legals",
+        list: [
+            "Privacy Policy",
+            "Terms of Service",
+            "Data Processing"
+        ]
+    }
+}
+
 
 
 // case study page 
+
+export const caseStudyNavbar = [
+    { id: 1, title: "Hero", src: "#hero" },
+    { id: 3, title: "Challenge", src: "#challenge" },
+    { id: 4, title: "Strategy", src: "#strategy" },
+    { id: 5, title: "Results", src: "#results" },
+    { id: 6, title: "Contact", src: "#contact" },
+]
 
 export const caseStudies = [
     {
@@ -518,6 +572,7 @@ export const caseStudies = [
                 "High bounce rates on landing pages",
                 "Disconnected marketing data",
             ],
+            image: "/challenge1.jpg"
         },
 
         strategy: [
@@ -563,6 +618,7 @@ export const caseStudies = [
         ],
 
         testimonial: {
+            image: "/client2.jpg",
             name: "Marcus Thorne",
             position: "CEO, Velocity Digital",
             quote:

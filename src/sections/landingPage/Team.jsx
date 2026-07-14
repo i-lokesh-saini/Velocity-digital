@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+import { teamData } from '../../data/data';
+
+const Team = () => {
+
+    const [hoveredCard, setHoveredCard] = useState(null);
+
+    return (
+        <section id='team' className='p-5 md:max-w-8xl max-w-full mx-auto  '>
+            <div className="heading-div">
+                <h6 className="sub-heading">{teamData.subHeading}</h6>
+                <h2 className="heading">{teamData.heading}</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-white w-11/12 mx-auto">
+                {teamData.members.map((item) => (
+                    <div className="bg-neutral-900 px-4 pt-5 pb-2 rounded-md border border-neutral-600 scale-90 transition-all duration-700 hover" key={item.id} onMouseEnter={() => setHoveredCard(item.id)} onMouseLeave={() => setHoveredCard(null)}>
+                        <div className="overflow-hidden w-fit">
+                            <img src={item.image} alt={item.image.split("/").pop().split(".")[0]} className={`rounded-md w-fit scale-100 hover:scale-105 transition-all duration-700 ${hoveredCard === null ? "grayscale-0" : hoveredCard === item.id ? "grayscale-0" : "grayscale"} ${hoveredCard === item.id ? "scale-110" : "scale-100"
+                                } `} />
+                        </div>
+                        <h6 className='p-2 text-xl text-slate-200'>{item.name}</h6>
+                        <p className="p-2 pt-0 text-xs text-(--primary)">{item.role}</p>
+
+                    </div>
+                ))}
+            </div>
+
+        </section>
+    )
+}
+
+export default Team
