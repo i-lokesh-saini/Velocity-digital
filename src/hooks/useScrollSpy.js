@@ -1,39 +1,43 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const sections = [
-    "home",
-    "about",
-    "services",
-    "workflow",
-    "work",
-    "field",
-    "team",
-];
+export default function useScrollSpy(sectionIds) {
+    const [activeSection, setActiveSection] = useState(sectionIds[0]);
 
-export default function useScrollSpy() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                const visible = entries.find((entry) => entry.isIntersecting);
-
-                if (!visible) return;
-
-                window.history.replaceState(
-                    {},
-                    "",
-                    `/#${visible.target.id}`
+                const visibleSections = entries.filter(
+                    (entry) => entry.isIntersecting
                 );
+
+                if (visibleSections.length === 0) return;
+
+                const currentSection = visibleSections.reduce(
+                    (previous, current) =>
+                        current.intersectionRatio > previous.intersectionRatio
+                            ? current
+                            : previous
+                );
+
+                setActiveSection(currentSection.target.id);
             },
             {
-                threshold: 0.5,
+                root: null,
+                rootMargin: "-80px 0px -50% 0px",
+                threshold: [0.1, 0.25, 0.5, 0.75],
             }
         );
 
-        sections.forEach((id) => {
+        sectionIds.forEach((id) => {
             const section = document.getElementById(id);
-            if (section) observer.observe(section);
+
+            if (section) {
+                observer.observe(section);
+            }
         });
 
         return () => observer.disconnect();
-    }, []);
+    }, [sectionIds]);
+
+    return activeSection;
 }
